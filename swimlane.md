@@ -12,7 +12,7 @@
 
 对服务链按需求进行分组复制，并实现逻辑、物理的隔离，使得不同需求的服务链运行在相隔的物理机器上。
 
-https://justinyangis.me/images/post/swimlane/swimlane.png
+[泳道图](https://justinyangis.me/images/post/swimlane/swimlane.png)
 
 **并行测试**
 
@@ -32,7 +32,7 @@ https://justinyangis.me/images/post/swimlane/swimlane.png
 
 当用户指定某泳道发布服务时，系统会为该服务的实例打上相应的泳道标记，服务注册和发现模块就能知道同一服务下不同实例的所属泳道。
 
-https://static001.geekbang.org/infoq/5a/5a0a47425da0a008e191dff245203645.jpeg?x-oss-process=image/resize,p_80/auto-orient,1
+[泳道服务实例图](https://static001.geekbang.org/infoq/5a/5a0a47425da0a008e191dff245203645.jpeg?x-oss-process=image/resize,p_80/auto-orient,1)
 
 **服务导流**
 
@@ -42,6 +42,10 @@ https://static001.geekbang.org/infoq/5a/5a0a47425da0a008e191dff245203645.jpeg?x-
 对于前端的静态资源，也可以基于泳道名进行隔离。在资源编译和打包的时候，指定发布的泳道名，然后资源会上传到该泳道对应的静态服务器中。
 
 多泳道发布是当今云时代自动化运维的必备工具。
+
+为什么不用RPC来选择泳道呢？这是因为在程序启动的时候需要配置泳道，这样的话配置文件和正式线上文件不一样，这在工程上来看是非常不好的行为，但是性能上是差不多的。
+
+如果算根据HTTP协议来按照泳道选路呢？首先header字段可以请求服务，接着就可以直接判断相等逻辑了。
 
 ### 泳道的特性
 
