@@ -12,7 +12,7 @@
 
 对服务链按需求进行分组复制，并实现逻辑、物理的隔离，使得不同需求的服务链运行在相隔的物理机器上。
 
-[泳道图]:https://justinyangis.me/images/post/swimlane/swimlane.png
+https://justinyangis.me/images/post/swimlane/swimlane.png
 
 **并行测试**
 
@@ -32,7 +32,7 @@
 
 当用户指定某泳道发布服务时，系统会为该服务的实例打上相应的泳道标记，服务注册和发现模块就能知道同一服务下不同实例的所属泳道。
 
-[泳道服务实例图]:https://static001.geekbang.org/infoq/5a/5a0a47425da0a008e191dff245203645.jpeg?x-oss-process=image/resize,p_80/auto-orient,1
+https://static001.geekbang.org/infoq/5a/5a0a47425da0a008e191dff245203645.jpeg?x-oss-process=image/resize,p_80/auto-orient,1
 
 **服务导流**
 
